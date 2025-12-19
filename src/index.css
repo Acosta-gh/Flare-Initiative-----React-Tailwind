@@ -1,2 +1,11 @@
 @import "tailwindcss";
 @plugin "@tailwindcss/typography";
+
+@theme {
+  --color-brand-peach: #FDF2E9;    /* Banner suave */
+  --color-brand-orange: #E8926F;   /* Naranja relajado / Terracota */
+  --color-brand-white: #F9F7F2;    /* Blanco hueso para fondos */
+  --color-brand-dark: #3A3A3A;     /* Gris oscuro para texto */
+
+  --font-brand: "Inter", sans-serif;
+}

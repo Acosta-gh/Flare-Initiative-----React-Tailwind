@@ -6,8 +6,8 @@ import CrisisBanner from "@/components/CrisisBanner";
 export default function Layout() {
   return (
     <>
-      <Header />
       <CrisisBanner />
+      <Header />
 
       <main>
         <Outlet />

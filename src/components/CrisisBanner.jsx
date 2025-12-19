@@ -3,51 +3,28 @@ import { Phone } from 'lucide-react';
 
 function CrisisBanner() {
   return (
-    <div className="bg-red-600 text-white py-2 overflow-hidden relative">
-      <div className="animate-scroll whitespace-nowrap">
-        <span className="inline-flex items-center gap-2 px-8">
-          <Phone className="w-4 h-4" />
-          <span className="text-sm">
-            If you are experiencing a crisis or need help, please call{' '}
-            <a 
-              href="tel:988" 
-              className="font-bold underline hover:text-red-100"
-            >
-              9-8-8
-            </a>
-            {' '}(Suicide & Crisis Lifeline)
+    <div className="fixed top-0 w-full bg-brand-peach text-brand-dark py-2.5 z-[70] border-b border-brand-orange/20 overflow-hidden shadow-sm">
+      <div className="flex animate-scroll whitespace-nowrap">
+        {[1, 2, 3].map((i) => (
+          <span key={i} className="inline-flex items-center gap-3 px-12 border-r border-brand-orange/10">
+            <Phone className="w-4 h-4 text-brand-orange" />
+            <span className="text-sm font-medium">
+              If you are in crisis or need help, please call{' '}
+              <a href="tel:988" className="font-bold underline decoration-brand-orange hover:text-brand-orange transition-colors">9-8-8</a>
+              {' '}(Suicide & Crisis Lifeline)
+            </span>
           </span>
-        </span>
-        <span className="inline-flex items-center gap-2 px-8">
-          <Phone className="w-4 h-4" />
-          <span className="text-sm">
-            If you are experiencing a crisis or need help, please call{' '}
-            <a 
-              href="tel:988" 
-              className="font-bold underline hover:text-red-100"
-            >
-              9-8-8
-            </a>
-            {' '}(Suicide & Crisis Lifeline)
-          </span>
-        </span>
+        ))}
       </div>
       
-      <style jsx>{`
+      <style>{`
         @keyframes scroll {
-          0% {
-            transform: translateX(0);
-          }
-          100% {
-            transform: translateX(-50%);
-          }
+          0% { transform: translateX(0); }
+          100% { transform: translateX(-100%); }
         }
-        
         .animate-scroll {
-          display: inline-block;
-          animation: scroll 20s linear infinite;
+          animation: scroll 30s linear infinite;
         }
-        
         .animate-scroll:hover {
           animation-play-state: paused;
         }

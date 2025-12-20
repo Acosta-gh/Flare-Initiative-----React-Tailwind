@@ -1,6 +1,5 @@
-import { Routes, Route } from "react-router-dom"
+import { HashRouter as Router, Routes, Route } from "react-router-dom" 
 import Layout from "@/layout/Layout"
-
 import ScrollToTop from '@/components/ScrollToTop'; 
 import Home from "@/pages/Home"
 import About from "@/pages/About"
@@ -8,9 +7,8 @@ import Contact from "@/pages/Contact"
 
 export default function App() {
   return (
-    <>
+    <Router> 
       <ScrollToTop /> 
-      
       <Routes>
         <Route element={<Layout />}>
           <Route path="/" element={<Home />} />
@@ -18,6 +16,6 @@ export default function App() {
           <Route path="/contact" element={<Contact />} />
         </Route>
       </Routes>
-    </>
+    </Router>
   )
 }

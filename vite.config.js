@@ -12,6 +12,7 @@ export default defineConfig({
     }),
     tailwindcss(),
   ],
+  base: '/Flare-Initiative-----React-Tailwind/',
   resolve: {
     alias: {
       '@': path.resolve(__dirname, 'src'),

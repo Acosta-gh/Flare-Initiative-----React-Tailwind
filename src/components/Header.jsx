@@ -64,12 +64,12 @@ function Header() {
           }}
         >
           <nav className="flex flex-col items-center justify-center h-full gap-8 text-2xl text-white font-light">
-            <a href="#home" onClick={toggleMenu}>
+            <Link to="/" onClick={toggleMenu}>
               Home
-            </a>
-            <a href="#about" onClick={toggleMenu}>
+            </Link>
+            <Link to="/about" onClick={toggleMenu}>
               About Us
-            </a>
+            </Link>
             <div className="w-12 h-[px] bg-white/30 my-4"></div>
             <p className="text-sm font-bold uppercase tracking-widest">
               Call 9-8-8 for help

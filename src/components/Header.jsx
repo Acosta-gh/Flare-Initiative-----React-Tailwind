@@ -1,6 +1,6 @@
 import { useState } from "react";
 import Hamburger from "hamburger-react";
-
+import { Link } from "react-router-dom";
 function Header() {
   const [isOpen, setIsOpen] = useState(false);
   const toggleMenu = () => setIsOpen((open) => !open);
@@ -10,33 +10,36 @@ function Header() {
       <header className="fixed top-[40px] w-full z-50 bg-white text-brand-dark border-b border-gray-100 font-brand">
         <div className="container mx-auto px-6 py-4 flex items-center justify-between">
           <div className="flex-shrink-0">
-              <img
-                src="images/logo2.png"
-                alt="Logo"
-                className="h-10 md:h-12 w-auto"
-                style={{
-                  filter: 'brightness(0) saturate(100%) invert(86%) sepia(54%) saturate(4973%) hue-rotate(309deg) brightness(98%) contrast(91%)'
-                }}
-              />
-            </div>
+            <img
+              src="images/logo2.png"
+              alt="Logo"
+              className="h-10 md:h-12 w-auto"
+              style={{
+                filter:
+                  "brightness(0) saturate(100%) invert(86%) sepia(54%) saturate(4973%) hue-rotate(309deg) brightness(98%) contrast(91%)",
+              }}
+            />
+          </div>
 
           {/* Desktop Nav */}
           <nav className="hidden md:flex items-center gap-10 font-medium">
-            <a
-              href="#home"
+            <Link
+              to="/"
               className="hover:text-brand-orange transition-colors"
             >
               Home
-            </a>
-            <a
-              href="#about"
+            </Link>
+            <Link 
+              to="/about"
               className="hover:text-brand-orange transition-colors"
             >
               About Us
-            </a>
-            <button className="px-5 py-2 rounded-full bg-brand-orange text-white hover:opacity-90 transition-all">
-              Get Help
-            </button>
+            </Link>
+            <Link to="/get-help">
+              <button className="px-5 py-2 rounded-full bg-brand-orange text-white hover:opacity-90 transition-all cursor-pointer font-medium">
+                Get Help
+              </button>
+            </Link>
           </nav>
 
           {/* Burger Button */}
